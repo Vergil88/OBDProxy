@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEF2F7"
+    android:padding="6dp">
+
+    <!-- Title + Status -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        <TextView android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="OBD Proxy"
+            android:textSize="18sp" android:textStyle="bold" android:textColor="#1A237E"/>
+        <TextView android:id="@+id/status"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="● 未连接" android:textSize="12sp"
+            android:textColor="#E53935" android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Row 1: Device + Scan + Start -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+        <Spinner android:id="@+id/deviceList"
+            android:layout_width="0dp" android:layout_height="46dp"
+            android:layout_weight="5"
+            android:background="@drawable/spinner_bg"
+            android:dropDownWidth="match_parent"/>
+        <Button android:id="@+id/btnScan"
+            android:layout_width="40dp" android:layout_height="46dp"
+            android:text="🔍" android:textSize="15sp"
+            android:background="@drawable/btn_secondary"
+            android:layout_marginLeft="4dp"/>
+        <Button android:id="@+id/btnStart"
+            android:layout_width="0dp" android:layout_height="46dp"
+            android:layout_weight="2" android:text="▶ 连接"
+            android:textSize="13sp" android:textColor="#FFF"
+            android:background="@drawable/btn_primary"
+            android:layout_marginLeft="4dp"/>
+    </LinearLayout>
+
+    <!-- Row 2: Sim buttons + Pause -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        <Button android:id="@+id/btnStaticSim"
+            android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="📊 静态模拟"
+            android:textSize="12sp" android:textColor="#546E7A"
+            android:background="@drawable/btn_secondary"/>
+        <Button android:id="@+id/btnDynamicSim"
+            android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="🔄 动态模拟"
+            android:textSize="12sp" android:textColor="#546E7A"
+            android:background="@drawable/btn_secondary"
+            android:layout_marginLeft="6dp"/>
+        <Button android:id="@+id/btnPause"
+            android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="⏸ 暂停"
+            android:textSize="12sp" android:textColor="#546E7A"
+            android:background="@drawable/btn_secondary"
+            android:layout_marginLeft="6dp"/>
+    </LinearLayout>
+
+    <!-- Row 3: Log button + path -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+        <Button android:id="@+id/btnLog"
+            android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:text="📁 日志"
+            android:textSize="12sp" android:textColor="#546E7A"
+            android:background="@drawable/btn_secondary"/>
+        <TextView android:id="@+id/logPath"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="2" android:textSize="10sp" android:textColor="#78909C"
+            android:paddingLeft="8dp" android:maxLines="2" android:ellipsize="middle"/>
+    </LinearLayout>
+
+    <!-- Log output — fills middle space -->
+    <ScrollView android:id="@+id/logScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginTop="4dp" android:layout_marginBottom="4dp"
+        android:background="#0C0C0C" android:padding="4dp">
+        <TextView android:id="@+id/log"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="11sp" android:textColor="#00FF41"
+            android:fontFamily="monospace" android:lineSpacingExtra="2dp"
+            android:shadowColor="#00FF4188" android:shadowRadius="3"/>
+    </ScrollView>
+
+    <!-- Calibration hint + input — pinned to bottom -->
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R=转速 T=扭矩 S=水温 C=油门 B=车速 | E=退火 H=增压 I=进气 A=空燃"
+        android:textSize="9sp" android:textColor="#90A4AE"
+        android:gravity="center" android:layout_marginBottom="4dp"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+        <EditText android:id="@+id/cmdInput"
+            android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:hint="例如: R=3000 B=80"
+            android:textSize="12sp" android:padding="10dp"
+            android:background="@drawable/edit_bg" android:textColor="#263238"
+            android:textColorHint="#B0BEC5"/>
+        <Button android:id="@+id/btnSet" android:text="SET"
+            android:layout_width="56dp" android:layout_height="44dp"
+            android:textSize="13sp" android:textColor="#FFF"
+            android:background="@drawable/btn_danger"
+            android:layout_marginLeft="4dp"/>
+    </LinearLayout>
+</LinearLayout>

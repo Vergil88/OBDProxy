@@ -1,0 +1,23 @@
+# Build
+app/build/
+build/
+*.idsig
+apk_backups/
+
+# Logs & data
+*.log
+*.csv
+
+# IDE
+.vscode/
+
+# Personal
+*.cbz
+*.jpg
+*.png
+*.pdf
+*.ps1
+
+# APKs not part of project
+*.apk
+!OBDProxy.apk

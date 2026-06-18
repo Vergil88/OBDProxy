@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- OBD connector body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,54 L36,70 C36,74 40,78 44,78 L64,78 C68,78 72,74 72,70 L72,54 Z" />
+    
+    <!-- OBD trapezoid top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,54 L44,40 C44,36 48,34 54,34 C60,34 64,36 64,40 L68,54 Z" />
+    
+    <!-- Pins -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M44,60 L48,60 L48,74 L44,74 Z" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M51,60 L55,60 L55,74 L51,74 Z" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M58,60 L62,60 L62,74 L58,74 Z" />
+
+    <!-- Bluetooth symbol -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,20 L50,24 L58,30 L50,36 L54,40 L64,30 Z" />
+    <path
+        android:strokeColor="#2196F3"
+        android:strokeWidth="2"
+        android:pathData="M54,20 L50,24 L58,30 M58,30 L50,36 L54,40" />
+</vector>

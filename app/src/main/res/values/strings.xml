@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OBD Proxy</string>
+    <string name="scanning">扫描ELM327...</string>
+    <string name="connected">已连接</string>
+    <string name="disconnected">未连接</string>
+    <string name="start_server">启动代理服务器</string>
+    <string name="stop_server">停止代理</string>
+</resources>
